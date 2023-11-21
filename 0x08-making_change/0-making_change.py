@@ -12,7 +12,8 @@ def makeChange(coins, total):
     If total is 0 or less, return 0
     If total cannot be met by any number of coins you have, return -1
     '''
-    if total <= 0 or total % min(coins) != 0:
+    coins.sort(reverse=True)
+    if total <= 0:
         return 0
     MAX_VALUE = float('inf')
     table = [MAX_VALUE for i in range(total + 1)]
