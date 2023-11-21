@@ -25,6 +25,6 @@ def makeChange(coins, total):
                 if subres != MAX_VALUE and subres + 1 < table[i]:
                     table[i] = subres + 1
 
-    if table[total] == MAX_VALUE:
+    if table[total] == MAX_VALUE + 1:
         return -1
     return table[total]
